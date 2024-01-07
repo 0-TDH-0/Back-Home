@@ -17,10 +17,10 @@ struct ButtonModel: View{
     var body: some View{
         Text(buttonText)
             .frame(width: 280, height: 50)
-            .background(buttonBack.gradient)
+            .background(buttonBack)
             .foregroundColor(buttonColor)
             .font(.system(size: 20, weight: .bold))
-            .cornerRadius(10)
+            .cornerRadius(20)
             .padding()
     }
 }

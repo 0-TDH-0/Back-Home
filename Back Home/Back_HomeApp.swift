@@ -10,6 +10,9 @@ import SwiftData
 
 @main
 struct Back_HomeApp: App {
+    
+    @State var screen = "main"
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
         ])
@@ -24,7 +27,25 @@ struct Back_HomeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if screen == "main"{
+                MainScreen(screen: $screen)
+            }
+            else if screen == "settings"{
+                Settings(screen: $screen)
+            }
+            else if screen == "inbox"{
+                Inbox(screen: $screen)
+            }
+            else if screen == "found"{
+                Found(screen: $screen)
+            }
+            else if screen == "lost"{
+                Lost(screen: $screen)
+            }
+            else if screen == "list"{
+                LostList(screen: $screen)
+            }
+            
         }
         .modelContainer(sharedModelContainer)
     }
