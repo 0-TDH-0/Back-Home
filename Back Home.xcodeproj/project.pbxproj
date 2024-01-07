@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		375C47612B49A819008C21D9 /* Back_HomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C47602B49A819008C21D9 /* Back_HomeApp.swift */; };
-		375C47632B49A819008C21D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C47622B49A819008C21D9 /* ContentView.swift */; };
 		375C47672B49A81B008C21D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375C47662B49A81B008C21D9 /* Assets.xcassets */; };
 		375C476A2B49A81B008C21D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375C47692B49A81B008C21D9 /* Preview Assets.xcassets */; };
 		375C47762B49A81B008C21D9 /* Back_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C47752B49A81B008C21D9 /* Back_HomeTests.swift */; };
@@ -48,7 +47,6 @@
 /* Begin PBXFileReference section */
 		375C475D2B49A819008C21D9 /* Back Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Back Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		375C47602B49A819008C21D9 /* Back_HomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back_HomeApp.swift; sourceTree = "<group>"; };
-		375C47622B49A819008C21D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		375C47662B49A81B008C21D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		375C47692B49A81B008C21D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		375C476B2B49A81B008C21D9 /* Back_Home.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Back_Home.entitlements; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				375C47602B49A819008C21D9 /* Back_HomeApp.swift */,
-				375C47622B49A819008C21D9 /* ContentView.swift */,
 				375C47662B49A81B008C21D9 /* Assets.xcassets */,
 				375C476B2B49A81B008C21D9 /* Back_Home.entitlements */,
 				375C476C2B49A81B008C21D9 /* Info.plist */,
@@ -344,7 +341,6 @@
 				375C47A12B49ED82008C21D9 /* loginAction.swift in Sources */,
 				378A0B302B4A3D900093F154 /* foundScreen.swift in Sources */,
 				375C47A52B4A1FF1008C21D9 /* buttonModel.swift in Sources */,
-				375C47632B49A819008C21D9 /* ContentView.swift in Sources */,
 				375C47902B49E0C4008C21D9 /* loginScreen.swift in Sources */,
 				375C47942B49E37A008C21D9 /* loginView.swift in Sources */,
 				375C47992B49E6DA008C21D9 /* loginRequest.swift in Sources */,

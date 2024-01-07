@@ -33,7 +33,7 @@ struct MainScreen: View {
                         Button{
                             
                         } label: {
-                            Text("University PlaceHolder")
+                            Text("University")
                                 .frame(width: 200, height: 30)
                                 .background(.black)
                                 .foregroundStyle(.white)
