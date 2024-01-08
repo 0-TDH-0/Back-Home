@@ -11,7 +11,7 @@ import SwiftData
 @main
 struct Back_HomeApp: App {
     
-    @State var screen = "main"
+    @State var isLoggedIn: Bool = false
     
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -27,7 +27,12 @@ struct Back_HomeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainScreen()
+            if isLoggedIn {
+                MainScreen()
+            }
+            else {
+                MainLoginScreen(isLoggedIn: $isLoggedIn)
+            }
         }
         .modelContainer(sharedModelContainer)
     }

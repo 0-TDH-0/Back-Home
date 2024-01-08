@@ -28,6 +28,7 @@ struct MainScreen: View {
                                         .frame(width: 40, height: 40)
 
                             }
+                            //TODO: change this to some sort of drop down or other screen. for now, points to inbox
                             NavigationLink(destination: Inbox()){
                                     Text("University")
                                         .frame(width: 200, height: 30)
@@ -38,7 +39,7 @@ struct MainScreen: View {
                                         .padding()
                             }
                             NavigationLink(destination: Inbox()){
-                                        Image(systemName: "tray.fill")
+                                    Image(systemName: "tray.fill")
                                         .renderingMode(.template)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
@@ -79,6 +80,6 @@ struct MainScreen: View {
     
 }
 
-//#Preview {
-//    MainScreen()
-//}
+#Preview {
+    MainScreen()
+}

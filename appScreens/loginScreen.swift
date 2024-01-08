@@ -12,46 +12,70 @@ import SwiftData
 struct MainLoginScreen: View {
     
     @ObservedObject var viewModel: LoginView = LoginView()
+    @Binding var isLoggedIn: Bool
     
     var body: some View {
-        VStack {
+        ZStack{
+            LinearGradient(colors: [.white, .gray], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+
+            VStack {
+                
+                Spacer()
+                
+                VStack {
+                        Text("Ready to Bring Items")
+                            .font(.system(size: 25, weight: .bold))
+                            .foregroundStyle(.black)
+                        
+                        Text("Back Home?")
+                            .font(.system(size: 30, weight: .bold))
+                            .foregroundStyle(.black)
                     
                     Spacer()
                     
-                    VStack {
-                        TextField(
-                            "Username",
-                            text: $viewModel.username
-                        )
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
-                        .padding(.top, 20)
-                        
-                        Divider()
-                        
-                        SecureField(
-                            "Password",
-                            text: $viewModel.passkey
-                        )
-                        .padding(.top, 20)
-                        
-                        Divider()
-                    }
+                    Text("Lets Get You Logged in")
+                        .font(.system(size: 25, weight: .bold))
+                        .foregroundStyle(.black)
+                        .padding(.top, 100)
                     
                     Spacer()
                     
-                    Button(
-                        action: viewModel.login,
-                        label: {
-                            Text("Login")
-                                .font(.system(size: 24, weight: .bold, design: .default))
-                                .frame(maxWidth: .infinity, maxHeight: 60)
-                                .foregroundColor(Color.white)
-                                .background(Color.blue)
-                                .cornerRadius(10)
-                        }
+                    TextField(
+                        "Username",
+                        text: $viewModel.username
                     )
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .padding(.top, 20)
+                    
+                    Divider()
+                    
+                    SecureField(
+                        "Password",
+                        text: $viewModel.passkey
+                    )
+                    .padding(.top, 20)
+                    
+                    Divider()
                 }
-                .padding(30)
+                
+                Spacer()
+                
+                Button{
+                    withAnimation(.smooth){
+                        isLoggedIn = true
+                    }
+                    //viewModel.login()
+                }   label: {
+                    ButtonModel(buttonText: "Login",
+                                buttonColor: .white,
+                                buttonBack: .black)
+                }
+                
+            }
+            .padding(30)
+        }
     }
 }
+
