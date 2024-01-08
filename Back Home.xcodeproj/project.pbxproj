@@ -25,6 +25,7 @@
 		378A0B302B4A3D900093F154 /* foundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B2F2B4A3D900093F154 /* foundScreen.swift */; };
 		378A0B322B4A3DA00093F154 /* lostScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B312B4A3DA00093F154 /* lostScreen.swift */; };
 		378A0B342B4A3DA90093F154 /* lostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B332B4A3DA90093F154 /* lostList.swift */; };
+		378A0B362B4C72BA0093F154 /* foundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B352B4C72BA0093F154 /* foundObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		378A0B2F2B4A3D900093F154 /* foundScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foundScreen.swift; sourceTree = "<group>"; };
 		378A0B312B4A3DA00093F154 /* lostScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostScreen.swift; sourceTree = "<group>"; };
 		378A0B332B4A3DA90093F154 /* lostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostList.swift; sourceTree = "<group>"; };
+		378A0B352B4C72BA0093F154 /* foundObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foundObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,7 @@
 				375C479F2B49ED76008C21D9 /* actions */,
 				375C479A2B49E716008C21D9 /* responses */,
 				375C47972B49E6AD008C21D9 /* requests */,
-				375C47922B49E35E008C21D9 /* viewModels */,
+				375C47922B49E35E008C21D9 /* models */,
 				375C478E2B49E0AB008C21D9 /* appScreens */,
 				375C475F2B49A819008C21D9 /* Back Home */,
 				375C47742B49A81B008C21D9 /* Back HomeTests */,
@@ -171,13 +173,14 @@
 			path = appScreens;
 			sourceTree = "<group>";
 		};
-		375C47922B49E35E008C21D9 /* viewModels */ = {
+		375C47922B49E35E008C21D9 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				375C47932B49E37A008C21D9 /* loginView.swift */,
 				375C47A42B4A1FF1008C21D9 /* buttonModel.swift */,
+				378A0B352B4C72BA0093F154 /* foundObject.swift */,
 			);
-			path = viewModels;
+			path = models;
 			sourceTree = "<group>";
 		};
 		375C47972B49E6AD008C21D9 /* requests */ = {
@@ -337,6 +340,7 @@
 				375C47A32B4A1E70008C21D9 /* mainScreen.swift in Sources */,
 				375C479C2B49E724008C21D9 /* loginResponse.swift in Sources */,
 				378A0B2C2B4A3B2C0093F154 /* settingsScreen.swift in Sources */,
+				378A0B362B4C72BA0093F154 /* foundObject.swift in Sources */,
 				378A0B322B4A3DA00093F154 /* lostScreen.swift in Sources */,
 				375C47A12B49ED82008C21D9 /* loginAction.swift in Sources */,
 				378A0B302B4A3D900093F154 /* foundScreen.swift in Sources */,

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MainScreen: View {
     
+    
         var body: some View {
             NavigationStack(){
                 ZStack{
@@ -68,6 +69,7 @@ struct MainScreen: View {
                                             buttonColor: .white,
                                             buttonBack: .black)
                         }
+                        
                         NavigationLink(destination: LostList()){
                                 ButtonModel(buttonText: "View the Lost and Found",
                                             buttonColor: .white,
