@@ -81,7 +81,3 @@ struct MainScreen: View {
     }
     
 }
-
-#Preview {
-    MainScreen()
-}

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LostObject: ObservableObject {
+class LostObjectEntry: ObservableObject {
     
     @Published var description: String = ""
     @Published var title: String = ""

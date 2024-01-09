@@ -11,7 +11,21 @@ import MapKit
 
 struct Found: View {
     
-    @ObservedObject var newFoundObject: FoundObject = FoundObject()
+    
+    @Environment(\.dismiss) var dismiss
+    private let alertTitle: String = "Test"
+    @State private var isSubmitted: Bool = false
+    @ObservedObject private var newFoundObject: FoundObjectEntry = FoundObjectEntry()
+    
+    func didDismiss(){
+        newFoundObject.foundAt = ""
+        newFoundObject.description = ""
+        newFoundObject.title = ""
+        newFoundObject.leftAt = ""
+        newFoundObject.associatedName = ""
+        
+        dismiss()
+    }
     
     var body: some View {
         ZStack{
@@ -24,9 +38,8 @@ struct Found: View {
                     .foregroundStyle(.black)
                     .padding(.top, 100)
                 
-                Spacer(minLength: 200)
+                Spacer(minLength: 100)
                 
-                HStack{
                     VStack{
                         /*
                          Maybe implement a map later? may be extraneous
@@ -99,10 +112,25 @@ struct Found: View {
                         }
                         Spacer()
                         
+                        Button{
+                            isSubmitted.toggle()
+                        }
+                        label: {
+                            ButtonModel(buttonText: "Submit",
+                                        buttonColor: .white,
+                                        buttonBack: .black)
+                        }
+                        .sheet(isPresented: $isSubmitted, onDismiss: didDismiss) {
+                            //TODO: when submitted
+                        }
+    
+                        
+                        Spacer()
+                        
                         
                         
                     }
-                }
+                    Spacer()
             }
         }
     }

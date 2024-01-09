@@ -10,8 +10,18 @@ import SwiftUI
 import MapKit
 
 struct Lost: View {
+
+    @Environment(\.dismiss) var dismiss
+    @State private var isSubmitted: Bool = false
+    @ObservedObject private var newFoundObject: LostObjectEntry = LostObjectEntry()
     
-    @ObservedObject var newFoundObject: LostObject = LostObject()
+    func didDismiss(){
+        newFoundObject.lostAt = ""
+        newFoundObject.description = ""
+        newFoundObject.title = ""
+        
+        dismiss()
+    }
     
     var body: some View {
         ZStack{
@@ -26,7 +36,6 @@ struct Lost: View {
                 
                 Spacer(minLength: 200)
                 
-                HStack{
                     VStack{
                         /*
                          Maybe implement a map later? may be extraneous
@@ -74,10 +83,24 @@ struct Lost: View {
                         }
                         Spacer()
                         
+                        Button{
+                            isSubmitted.toggle()
+                        }
+                        label: {
+                            ButtonModel(buttonText: "Submit",
+                                        buttonColor: .white,
+                                        buttonBack: .black)
+                        }
+                        .sheet(isPresented: $isSubmitted, onDismiss: didDismiss) {
+                            //TODO: when submitted
+                        }
+                        
+                        Spacer()
+                        
                         
                         
                     }
-                }
+                    Spacer()
             }
         }
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FoundObject: ObservableObject {
+class FoundObjectEntry: ObservableObject {
     
     @Published var description: String = ""
     @Published var title: String = ""
