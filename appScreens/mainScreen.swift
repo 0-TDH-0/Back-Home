@@ -40,7 +40,7 @@ struct MainScreen: View {
                                         .padding()
                             }
                             NavigationLink(destination: Inbox()){
-                                    Image(systemName: "tray.fill")
+                                    Image(systemName: "info.circle")
                                         .renderingMode(.template)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)

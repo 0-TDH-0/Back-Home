@@ -15,6 +15,8 @@ struct Found: View {
     @Environment(\.dismiss) var dismiss
     private let alertTitle: String = "Test"
     @State private var isSubmitted: Bool = false
+    @State private var submitFail: Bool = false
+    @State private var checkAnimate: Bool = false
     @ObservedObject private var newFoundObject: FoundObjectEntry = FoundObjectEntry()
     
     func didDismiss(){
@@ -113,7 +115,7 @@ struct Found: View {
                         Spacer()
                         
                         Button{
-                            isSubmitted.toggle()
+                            submit() ? isSubmitted.toggle(): submitFail.toggle()
                         }
                         label: {
                             ButtonModel(buttonText: "Submit",
@@ -121,7 +123,64 @@ struct Found: View {
                                         buttonBack: .black)
                         }
                         .sheet(isPresented: $isSubmitted, onDismiss: didDismiss) {
-                            //TODO: when submitted
+                            ZStack{
+                                
+                                LinearGradient(colors: [.white, .gray], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    .ignoresSafeArea()
+                                
+                                VStack{
+                                    Spacer(minLength: 200)
+                                    
+                                    Image(systemName: "checkmark.circle")
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .frame(width: 250, height: 250)
+                                        .symbolEffect(.bounce.down.byLayer,options: .speed(0.75) ,value: checkAnimate)
+                                        .onAppear(){
+                                            checkAnimate.toggle()
+                                        }
+                                    
+                                    Spacer(minLength: 100)
+                                    
+                                    Text("Your Submission Has Been Sent")
+                                        .font(.system(size: 20, weight: .bold))
+                                        .foregroundStyle(.black)
+                                        .padding()
+                                    
+                                    Spacer()
+                                    
+                                }
+                            }
+                        }
+                        .sheet(isPresented: $submitFail, onDismiss: didDismiss){
+                            ZStack{
+                                
+                                LinearGradient(colors: [.white, .gray], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    .ignoresSafeArea()
+                                
+                                VStack{
+                                    Spacer(minLength: 200)
+                                    
+                                    Image(systemName: "x.circle")
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .frame(width: 250, height: 250)
+                                        .symbolEffect(.bounce.down.byLayer,options: .speed(0.75) ,value: checkAnimate)
+                                        .onAppear(){
+                                            checkAnimate.toggle()
+                                        }
+                                    
+                                    Spacer(minLength: 100)
+                                    
+                                    Text("Your Submission Failed, try Again")
+                                        .font(.system(size: 20, weight: .bold))
+                                        .foregroundStyle(.black)
+                                        .padding()
+                                    
+                                    Spacer()
+                                    
+                                }
+                            }
                         }
     
                         
