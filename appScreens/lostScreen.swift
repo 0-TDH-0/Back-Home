@@ -182,6 +182,11 @@ struct Lost: View {
                     Spacer()
             }
         }
+        .onAppear(){
+            newFoundObject.lostAt = ""
+            newFoundObject.description = ""
+            newFoundObject.title = ""
+        }
     }
     
 }

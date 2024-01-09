@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PhotosUI
 import SwiftUI
 import MapKit
 
@@ -21,6 +22,10 @@ struct Found: View {
     @ObservedObject private var newFoundObject: FoundObjectEntry = FoundObjectEntry()
     
     func didDismiss(){
+        
+        newFoundObject.imageItem = nil
+        newFoundObject.image = nil
+        
         newFoundObject.foundAt = ""
         newFoundObject.description = ""
         newFoundObject.title = ""
@@ -41,7 +46,7 @@ struct Found: View {
                     .foregroundStyle(.black)
                     .padding(.top, 100)
                 
-                Spacer(minLength: 100)
+                Spacer(minLength: 40)
                 
                     VStack{
                         /*
@@ -50,6 +55,33 @@ struct Found: View {
                          .frame(width: 250, height: 250)
                          .mapControlVisibility(.visible)
                          */
+                        HStack{
+                            
+                            PhotosPicker("Select Image", selection: $newFoundObject.imageItem, matching: .images)
+                                .padding(.leading)
+                                .foregroundStyle(.white)
+                            
+                            Spacer()
+                            
+                            newFoundObject.image?
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, height: 200)
+                            
+                            Spacer()
+                            
+                        }
+                        .onChange(of: newFoundObject.imageItem) {
+                            Task {
+                                if let loaded = try? await newFoundObject.imageItem?.loadTransferable(type: Image.self){
+                                    newFoundObject.image = loaded
+                                }
+                                else {
+                                    print("failed")
+                                }
+                            }
+                        }
+                        
                         HStack{
                             Text("Title:")
                                 .frame(width: 90)
@@ -212,6 +244,16 @@ struct Found: View {
                     }
                     Spacer()
             }
+        }
+        .onAppear(){
+            newFoundObject.imageItem = nil
+            newFoundObject.image = nil
+            
+            newFoundObject.foundAt = ""
+            newFoundObject.description = ""
+            newFoundObject.title = ""
+            newFoundObject.leftAt = ""
+            newFoundObject.associatedName = ""
         }
     }
     
