@@ -39,7 +39,7 @@ struct MainScreen: View {
                                         .cornerRadius(15)
                                         .padding()
                             }
-                            NavigationLink(destination: Inbox()){
+                            NavigationLink(destination: InfoScreen()){
                                     Image(systemName: "info.circle")
                                         .renderingMode(.template)
                                         .resizable()

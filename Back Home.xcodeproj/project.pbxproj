@@ -28,6 +28,7 @@
 		378A0B362B4C72BA0093F154 /* foundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B352B4C72BA0093F154 /* foundObject.swift */; };
 		378A0B3A2B4CD4800093F154 /* lostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B392B4CD4800093F154 /* lostObject.swift */; };
 		37D8F77A2B4DA7C50084F3A5 /* submit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D8F7792B4DA7C50084F3A5 /* submit.swift */; };
+		37D8F77C2B4DAD720084F3A5 /* infoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D8F77B2B4DAD720084F3A5 /* infoScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		378A0B352B4C72BA0093F154 /* foundObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foundObject.swift; sourceTree = "<group>"; };
 		378A0B392B4CD4800093F154 /* lostObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostObject.swift; sourceTree = "<group>"; };
 		37D8F7792B4DA7C50084F3A5 /* submit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = submit.swift; sourceTree = "<group>"; };
+		37D8F77B2B4DAD720084F3A5 /* infoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				378A0B2F2B4A3D900093F154 /* foundScreen.swift */,
 				378A0B312B4A3DA00093F154 /* lostScreen.swift */,
 				378A0B332B4A3DA90093F154 /* lostList.swift */,
+				37D8F77B2B4DAD720084F3A5 /* infoScreen.swift */,
 			);
 			path = appScreens;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				375C47902B49E0C4008C21D9 /* loginScreen.swift in Sources */,
 				375C47942B49E37A008C21D9 /* loginView.swift in Sources */,
 				37D8F77A2B4DA7C50084F3A5 /* submit.swift in Sources */,
+				37D8F77C2B4DAD720084F3A5 /* infoScreen.swift in Sources */,
 				375C47992B49E6DA008C21D9 /* loginRequest.swift in Sources */,
 				378A0B342B4A3DA90093F154 /* lostList.swift in Sources */,
 				375C47612B49A819008C21D9 /* Back_HomeApp.swift in Sources */,

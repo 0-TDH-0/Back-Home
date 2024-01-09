@@ -11,7 +11,7 @@ import SwiftData
 
 struct MainLoginScreen: View {
     
-    @ObservedObject var viewModel: LoginView = LoginView()
+    @ObservedObject private var viewModel: LoginView = LoginView()
     @Binding var isLoggedIn: Bool
     
     var body: some View {

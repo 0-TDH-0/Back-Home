@@ -12,9 +12,11 @@ import MapKit
 struct Lost: View {
 
     @Environment(\.dismiss) var dismiss
+    
     @State private var isSubmitted: Bool = false
     @State private var submitFail: Bool = false
     @State private var checkAnimate: Bool = false
+    
     @ObservedObject private var newFoundObject: LostObjectEntry = LostObjectEntry()
     
     func didDismiss(){
