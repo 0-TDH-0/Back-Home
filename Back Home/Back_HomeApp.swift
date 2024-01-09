@@ -14,8 +14,7 @@ struct Back_HomeApp: App {
     @State var isLoggedIn: Bool = false
     
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-        ])
+        let schema = Schema([])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {

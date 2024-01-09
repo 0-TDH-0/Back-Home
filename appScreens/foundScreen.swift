@@ -150,6 +150,16 @@ struct Found: View {
                                     
                                     Spacer()
                                     
+                                    Button{
+                                        isSubmitted.toggle()
+                                    }label: {
+                                        ButtonModel(buttonText: "Okay",
+                                                    buttonColor: .white,
+                                                    buttonBack: .black)
+                                    }
+                                    
+                                    Spacer()
+                                    
                                 }
                             }
                         }
@@ -177,6 +187,16 @@ struct Found: View {
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundStyle(.black)
                                         .padding()
+                                    
+                                    Spacer()
+                                    
+                                    Button{
+                                        submitFail.toggle()
+                                    }label: {
+                                        ButtonModel(buttonText: "Dismiss",
+                                                    buttonColor: .white,
+                                                    buttonBack: .black)
+                                    }
                                     
                                     Spacer()
                                     
