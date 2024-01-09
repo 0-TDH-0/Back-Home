@@ -26,6 +26,7 @@
 		378A0B322B4A3DA00093F154 /* lostScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B312B4A3DA00093F154 /* lostScreen.swift */; };
 		378A0B342B4A3DA90093F154 /* lostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B332B4A3DA90093F154 /* lostList.swift */; };
 		378A0B362B4C72BA0093F154 /* foundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B352B4C72BA0093F154 /* foundObject.swift */; };
+		378A0B3A2B4CD4800093F154 /* lostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A0B392B4CD4800093F154 /* lostObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		378A0B312B4A3DA00093F154 /* lostScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostScreen.swift; sourceTree = "<group>"; };
 		378A0B332B4A3DA90093F154 /* lostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostList.swift; sourceTree = "<group>"; };
 		378A0B352B4C72BA0093F154 /* foundObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foundObject.swift; sourceTree = "<group>"; };
+		378A0B392B4CD4800093F154 /* lostObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				375C47932B49E37A008C21D9 /* loginView.swift */,
 				375C47A42B4A1FF1008C21D9 /* buttonModel.swift */,
 				378A0B352B4C72BA0093F154 /* foundObject.swift */,
+				378A0B392B4CD4800093F154 /* lostObject.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				375C479C2B49E724008C21D9 /* loginResponse.swift in Sources */,
 				378A0B2C2B4A3B2C0093F154 /* settingsScreen.swift in Sources */,
 				378A0B362B4C72BA0093F154 /* foundObject.swift in Sources */,
+				378A0B3A2B4CD4800093F154 /* lostObject.swift in Sources */,
 				378A0B322B4A3DA00093F154 /* lostScreen.swift in Sources */,
 				375C47A12B49ED82008C21D9 /* loginAction.swift in Sources */,
 				378A0B302B4A3D900093F154 /* foundScreen.swift in Sources */,

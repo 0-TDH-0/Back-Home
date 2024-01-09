@@ -11,7 +11,7 @@ import MapKit
 
 struct Found: View {
     
-    @ObservedObject var newFoundObject: foundObject = foundObject()
+    @ObservedObject var newFoundObject: FoundObject = FoundObject()
     
     var body: some View {
         ZStack{
@@ -36,6 +36,7 @@ struct Found: View {
                          */
                         HStack{
                             Text("Title:")
+                                .frame(width: 90)
                                 .font(.system(size: 15, weight: .bold))
                                 .foregroundStyle(.black)
                                 .padding()
@@ -47,17 +48,19 @@ struct Found: View {
                         }
                         HStack{
                             Text("Associated Name:")
+                                .frame(width: 90)
                                 .font(.system(size: 15, weight: .bold))
                                 .foregroundStyle(.black)
                                 .padding()
                             Spacer()
-                            TextField("If a Name can be Given, put it Here.", text: $newFoundObject.associatedName, axis: .vertical)
+                            TextField("If Applicable.", text: $newFoundObject.associatedName, axis: .vertical)
                                 .frame(width: 250)
                                 .textFieldStyle(.roundedBorder)
                             Spacer()
                         }
                         HStack{
                             Text("Description:")
+                                .frame(width: 90)
                                 .font(.system(size: 15, weight: .bold))
                                 .foregroundStyle(.black)
                                 .padding()
@@ -70,6 +73,7 @@ struct Found: View {
                         }
                         HStack{
                             Text("Found At:")
+                                .frame(width: 90)
                                 .font(.system(size: 15, weight: .bold))
                                 .foregroundStyle(.black)
                                 .padding()
@@ -82,6 +86,7 @@ struct Found: View {
                         }
                         HStack{
                             Text("Left At:")
+                                .frame(width: 90)
                                 .font(.system(size: 15, weight: .bold))
                                 .foregroundStyle(.black)
                                 .padding()

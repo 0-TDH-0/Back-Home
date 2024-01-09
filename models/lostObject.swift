@@ -7,12 +7,10 @@
 
 import Foundation
 
-class FoundObject: ObservableObject {
+class LostObject: ObservableObject {
     
     @Published var description: String = ""
     @Published var title: String = ""
-    @Published var foundAt: String = ""
-    @Published var leftAt: String = ""
-    @Published var associatedName: String = ""
+    @Published var lostAt: String = ""
     
 }
