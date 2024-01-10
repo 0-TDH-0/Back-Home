@@ -5,7 +5,6 @@
 //  Created by Tommy Hale on 1/6/24.
 //
 
-import Foundation
 import PhotosUI
 import SwiftUI
 import MapKit
@@ -92,6 +91,7 @@ struct Found: View {
                             TextField("Give the Item a Title.", text: $newFoundObject.title, axis: .vertical)
                                 .frame(width: 250)
                                 .textFieldStyle(.roundedBorder)
+                            
                             Spacer()
                         }
                         HStack{

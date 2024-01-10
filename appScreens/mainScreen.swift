@@ -4,8 +4,6 @@
 //
 //  Created by Tommy Hale on 1/6/24.
 //
-
-import Foundation
 import SwiftUI
 
 struct MainScreen: View {
@@ -29,7 +27,7 @@ struct MainScreen: View {
                                         .frame(width: 40, height: 40)
 
                             }
-                            //TODO: change this to some sort of drop down or other screen. for now, points to inbox
+                            //TODO: change this to some sort of drop down or other screen. for now, points to inbox DEPRECATED
                             NavigationLink(destination: Inbox()){
                                     Text("University")
                                         .frame(width: 200, height: 30)
