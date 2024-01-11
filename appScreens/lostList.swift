@@ -13,8 +13,25 @@ struct LostList: View {
         ZStack{
             LinearGradient(colors: [.gray, .white], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
-            
+            ScrollView{
+                LazyVStack{
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                    foundItems()
+                }
+            }
         }
     }
     
+}
+#Preview {
+    LostList()
 }

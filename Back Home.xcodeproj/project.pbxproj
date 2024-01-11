@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373BCF5C2B50815700022DDD /* lostItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373BCF5B2B50815700022DDD /* lostItems.swift */; };
+		373BCF5E2B50817F00022DDD /* foundItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373BCF5D2B50817F00022DDD /* foundItems.swift */; };
 		375C47612B49A819008C21D9 /* Back_HomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C47602B49A819008C21D9 /* Back_HomeApp.swift */; };
 		375C47672B49A81B008C21D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375C47662B49A81B008C21D9 /* Assets.xcassets */; };
 		375C476A2B49A81B008C21D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375C47692B49A81B008C21D9 /* Preview Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		373BCF5B2B50815700022DDD /* lostItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lostItems.swift; sourceTree = "<group>"; };
+		373BCF5D2B50817F00022DDD /* foundItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foundItems.swift; sourceTree = "<group>"; };
 		375C475D2B49A819008C21D9 /* Back Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Back Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		375C47602B49A819008C21D9 /* Back_HomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back_HomeApp.swift; sourceTree = "<group>"; };
 		375C47662B49A81B008C21D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				378A0B352B4C72BA0093F154 /* foundObject.swift */,
 				378A0B392B4CD4800093F154 /* lostObject.swift */,
 				37D8F7792B4DA7C50084F3A5 /* submit.swift */,
+				373BCF5B2B50815700022DDD /* lostItems.swift */,
+				373BCF5D2B50817F00022DDD /* foundItems.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -354,9 +360,11 @@
 				378A0B322B4A3DA00093F154 /* lostScreen.swift in Sources */,
 				375C47A12B49ED82008C21D9 /* loginAction.swift in Sources */,
 				378A0B302B4A3D900093F154 /* foundScreen.swift in Sources */,
+				373BCF5E2B50817F00022DDD /* foundItems.swift in Sources */,
 				375C47A52B4A1FF1008C21D9 /* buttonModel.swift in Sources */,
 				375C47902B49E0C4008C21D9 /* loginScreen.swift in Sources */,
 				375C47942B49E37A008C21D9 /* loginView.swift in Sources */,
+				373BCF5C2B50815700022DDD /* lostItems.swift in Sources */,
 				37D8F77A2B4DA7C50084F3A5 /* submit.swift in Sources */,
 				37D8F77C2B4DAD720084F3A5 /* infoScreen.swift in Sources */,
 				375C47992B49E6DA008C21D9 /* loginRequest.swift in Sources */,
